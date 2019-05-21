@@ -1,0 +1,326 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+img{
+    display: block;
+}
+
+input{
+    outline: none;
+}
+
+html,body{
+    height: 100%;
+    overflow: hidden;
+}
+
+@rem:67.5rem;
+
+#wrap{
+    height: 100%;
+    background: #eee;
+    position: relative;
+    .header{
+        width: 1080/@rem;
+        background: #333;
+        position: absolute;
+        z-index: 100;
+        .topHeader{
+            height: 135/@rem;
+            .logo{
+                float: left;
+                width: 240/@rem;
+                height: 88/@rem;
+                padding: 26/@rem 17/@rem 21/@rem 17/@rem;
+                img{
+                    width: 100%;
+                }
+            }
+            .menuBtn{
+                float: left;
+                display: block;
+                width: 129/@rem;
+                height: 135/@rem;
+                background-image: url(../img/menuBtn.png);
+                background-size: 82/@rem 233/@rem;
+                background-repeat: no-repeat;
+                &.menuBtnClose{
+                    background-position: center 16/@rem;
+                }
+                &.menuBtnOpen{
+                    background-position: center -120/@rem;
+                }
+            }
+            .buts{
+                float: right;
+                padding-top: 21/@rem;
+                a{
+                    float: left;
+                    display: block;
+                    width: 111/@rem;
+                    height: 78/@rem;
+                    line-height: 78/@rem;
+                    background: #690;
+                    color: #ccc;
+                    margin-right: 15/@rem;
+                    font-size: 42/@rem;
+                    text-align: center;
+                    border-radius: 8/@rem;
+                    &:first-child{
+                        width: 130/@rem;
+                        height: 88/@rem;
+                        line-height: 88/@rem;
+                        color: #fff;
+                        margin: 3/@rem 30/@rem 0 0;
+                        font-weight: bold;
+                        border-radius: 10/@rem;
+                    }
+                }
+                
+            }
+            
+            
+        }
+        .search{
+            height: 103/@rem;
+            padding: 16/@rem;
+            input[type="text"]{
+                float: left;
+                box-sizing: border-box;
+                width: 829/@rem;
+                height: 103/@rem;
+                background: #999;
+                padding: 5/@rem 10/@rem;
+                border: 1/@rem solid #5a5a5a;
+                font-size: 41/@rem;
+                color: #333333;
+                border-radius: 15/@rem 0 0 15/@rem;
+                &:focus{
+                    background: #FFFFFF;
+                }
+                &::-webkit-input-placeholder{
+                    color: #333;
+                }
+            }
+            input[type="submit"]{
+                float: right;
+                width: 203/@rem;
+                height: 103/@rem;
+                border: none;
+                background: #414040;
+                color: #FFFFFF;
+                font-size: 41/@rem;
+                border-radius: 0 15/@rem 15/@rem 0;
+            }
+        }
+        .mask{
+            display: none;
+            width: 100%;
+            position: absolute;
+            top: 135/@rem;
+            left: 0;
+            padding: 10/@rem 0;
+            border-top: 1/@rem solid #6a6a6a;
+            background: rgba(0,0,0,.8);
+            li{
+                float: left;
+                height: 135/@rem;
+                width: 22.5%;
+                line-height: 135/@rem;
+                font-size: 54/@rem;
+                text-align: center;
+                font-weight: bold;
+                a{
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+    .contentWrap{
+        height: 100%;
+        overflow: hidden;
+        .content{
+            padding-top: 270/@rem;
+            .navWrap{
+                box-sizing: border-box;
+                height: 177/@rem;
+                padding: 31/@rem 0 14/@rem 0;
+                .navList{
+                    white-space: nowrap;
+                    float: left;
+                    overflow: hidden;
+                    font-size: 0;
+                    li{
+                        font-size: 1rem;
+                        display: inline-block;
+                        height: 129/@rem;
+                        padding: 0 38/@rem;
+                        line-height: 129/@rem;
+                        
+                        a{
+                            color: #020202;
+                        }
+                        &.active{
+                            background: #669900;
+                            a{
+                                color: #FFFFFF;
+                            }
+                        }
+                    }
+                }
+                
+            }
+            .bannerWrap{
+                width: 100%;
+                position: relative;
+                .bannerList{
+                    overflow: hidden;
+                    li{
+                        float: left;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+                .icons{
+                    width: 100%;
+                    height: 10px;
+                    text-align: center;
+                    position: absolute;
+                    bottom: 20px;
+                    left: 0;
+                    span{
+                        display: inline-block;
+                        width: 10px;
+                        height: 10px;
+                        background: gray;
+                        border-radius: 50%;
+                        &.active{
+                            background: red;
+                        }
+                    }
+                }
+            }
+            .tab{
+                width: 1046/@rem;
+                background: #FFFFFF;
+                margin: 0 auto;
+                overflow: hidden;
+                .tabHeader{
+                    height: 135/@rem;
+                    line-height: 135/@rem;
+                    h3{
+                        float: left;
+                        font-size: 1rem;
+                    }
+                    a{
+                        float: right;
+                        font-size: .6rem;
+                        color: #333;
+                    }
+                }
+                .tabNav{
+                    height: 105/@rem;
+                    line-height: 105/@rem;
+                    position: relative;
+                    a{
+                        float: left;
+                        display: block;
+                        height: 105/@rem;
+                        width: 120/@rem;
+                        font-size: 44/@rem;
+                        text-align: center;
+                        color: #6b6b6b;
+                    }
+                    .smallGreen{
+                        position: absolute;
+                        left: 0;
+                        bottom: 3px;
+                        display: block;
+                        width: 120/@rem;
+                        height: 9/@rem;
+                        background: #6f900d;
+                    }
+                }
+                .tabWrap{
+                    width: 300%;
+                    overflow: hidden;
+                    .loading{
+                        float: left;
+                        width: 33.33333%;
+                        height: 101/@rem;
+                        opacity: 0;
+                        background-image: url(../img/loading.gif);
+                        background-repeat: no-repeat;
+                        background-position: center;
+                    }
+                    .tabList{
+                        float: left;
+                        width: 33.33333%;
+                        overflow: hidden;
+                        li{
+                            float: left;
+                            box-sizing: border-box;
+                            width: 506/@rem;
+                            margin: 8/@rem;
+                            padding: 5/@rem;
+                            font-size: 40/@rem;
+                            background: #efefef;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            a{
+                                color: #000;
+                                img{
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                            .ice{
+                                width: 100%;
+                                margin-top: 2px;
+                                span{
+                                    padding-left: 23px;
+                                    background-image: url(../img/ice.png);
+                                    background-repeat: no-repeat;
+                                    &.left{
+                                        background-position: 2px 3px;
+                                    }
+                                    &.right{
+                                        background-position: 2px -16px;
+                                    }
+                                }
+                                
+                            }
+                            
+                        }
+                    }
+                }            
+            }
+        }
+    }
+    #scrollBar{
+        width: 4px;
+        background: red;
+        opacity: 0;
+        transition: opacity .5s;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 200;
+    }
+}
+
+
